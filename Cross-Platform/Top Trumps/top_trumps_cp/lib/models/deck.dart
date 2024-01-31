@@ -1,5 +1,7 @@
 library toptrumps.models;
 
+import 'dart:ui';
+
 import 'card.dart';
 
 final class Deck {
@@ -7,5 +9,14 @@ final class Deck {
 
   final List<Card> cards;
 
-  const Deck(this.name, this.cards);
+  final Image cover;
+
+  final String description;
+
+  const Deck(
+    this.name,
+    this.cards,
+    this.cover,
+    this.description,
+  );
 }
