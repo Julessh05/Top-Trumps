@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:string_translate/string_translate.dart' show Translate;
 import 'package:top_trumps_cp/blocs/home_bloc.dart';
 import 'package:top_trumps_cp/models/deck.dart';
+import 'package:top_trumps_cp/router/routes.dart';
 
 /// Home View shown to the User when the App is opened
 final class HomeMobile extends StatefulWidget {
@@ -15,11 +16,11 @@ final class HomeMobile extends StatefulWidget {
 }
 
 final class _HomeMobileState extends State<HomeMobile> {
-  late HomeBloc? _bloc;
+  HomeBloc? _bloc;
 
   @override
   Widget build(BuildContext context) {
-    _bloc ?? BlocParent.of(context);
+    _bloc ??= BlocParent.of(context);
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
@@ -33,7 +34,9 @@ final class _HomeMobileState extends State<HomeMobile> {
       ),
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, Routes.addDeck);
+        },
       ),
     );
   }
@@ -43,13 +46,11 @@ final class _HomeMobileState extends State<HomeMobile> {
     return SizedBox(
       height: size.height / 1.5,
       width: size.width - 100,
-      child: Center(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          verticalDirection: VerticalDirection.down,
-          children: [Text(deck.name), Text(deck.cards.length.toString())],
-        ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        verticalDirection: VerticalDirection.down,
+        children: [Text(deck.name), Text(deck.cards.length.toString())],
       ),
     );
   }
