@@ -7,5 +7,5 @@ final class Deck {
 
   final List<Card> cards;
 
-  Deck(this.name, this.cards);
+  const Deck(this.name, this.cards);
 }

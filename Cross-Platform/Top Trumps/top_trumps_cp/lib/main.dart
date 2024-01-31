@@ -36,7 +36,7 @@ final class _TopTrumpsAppState extends State<TopTrumpsApp> {
       // Routes
       initialRoute: '/',
       routes: {},
-      
+
       // Theme
       theme: Themes.lightTheme,
       darkTheme: Themes.darkTheme,

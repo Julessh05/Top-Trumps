@@ -1,4 +1,4 @@
-library toptrumps.views;
+library toptrumps.mobileviews;
 
 import 'package:bloc_implementation/bloc_implementation.dart' show BlocParent;
 import 'package:flutter/material.dart';
@@ -6,14 +6,15 @@ import 'package:string_translate/string_translate.dart' show Translate;
 import 'package:top_trumps_cp/blocs/home_bloc.dart';
 import 'package:top_trumps_cp/models/deck.dart';
 
-class Home extends StatefulWidget {
-  const Home({super.key});
+/// Home View shown to the User when the App is opened
+final class HomeMobile extends StatefulWidget {
+  const HomeMobile({super.key});
 
   @override
-  State<StatefulWidget> createState() => _HomeState();
+  State<StatefulWidget> createState() => _HomeMobileState();
 }
 
-final class _HomeState extends State<Home> {
+final class _HomeMobileState extends State<HomeMobile> {
   late HomeBloc? _bloc;
 
   @override
