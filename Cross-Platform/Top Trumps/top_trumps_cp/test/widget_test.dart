@@ -13,7 +13,7 @@ import 'package:top_trumps_cp/main.dart';
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+    await tester.pumpWidget(const TopTrumpsApp());
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);
