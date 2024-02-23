@@ -50,7 +50,10 @@ final class _HomeMobileState extends State<HomeMobile> {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         verticalDirection: VerticalDirection.down,
-        children: [Text(deck.name), Text(deck.cards.length.toString())],
+        children: [
+          Text(deck.name),
+          Text(deck.cards.length.toString()),
+        ],
       ),
     );
   }

@@ -6,6 +6,7 @@ import 'package:modern_themes/modern_themes.dart' show Themes;
 import 'package:string_translate/string_translate.dart'
     show Translation, TranslationLocales, TranslationDelegates;
 import 'package:top_trumps_cp/blocs/add_deck_bloc.dart';
+import 'package:top_trumps_cp/blocs/editor_bloc.dart';
 import 'package:top_trumps_cp/blocs/home_bloc.dart';
 import 'package:top_trumps_cp/data/translations.dart';
 import 'package:top_trumps_cp/router/routes.dart';
@@ -63,6 +64,19 @@ final class _TopTrumpsAppState extends State<TopTrumpsApp> {
       },
       onUnknownRoute: (_) =>
           MaterialPageRoute(builder: (_) => const ErrorView()),
+      onGenerateRoute: (RouteSettings settings) {
+        return MaterialPageRoute(builder: (_) {
+          switch (settings.name) {
+            case Routes.editor:
+              return BlocParent(
+                bloc: EditorBloc(),
+                child: WidgetRouter.editor(settings: settings),
+              );
+            default:
+              return const ErrorView();
+          }
+        });
+      },
 
       // Theme
       theme: Themes.lightTheme,

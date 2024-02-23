@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/top_trumps_cp/top_trumps_cp.iml" filepath="$PROJECT_DIR$/top_trumps_cp/top_trumps_cp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/top_trumps_cp/android/top_trumps_cp_android.iml" filepath="$PROJECT_DIR$/top_trumps_cp/android/top_trumps_cp_android.iml" />
     </modules>
   </component>
 </project>

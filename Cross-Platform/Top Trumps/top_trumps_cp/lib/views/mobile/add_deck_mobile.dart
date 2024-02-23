@@ -3,7 +3,7 @@ library toptrumps.mobileviews;
 import 'package:flutter/material.dart';
 import 'package:string_translate/string_translate.dart' show Translate;
 
-class AddDeckMobile extends StatelessWidget {
+final class AddDeckMobile extends StatelessWidget {
   const AddDeckMobile({super.key});
 
   @override
@@ -20,12 +20,12 @@ class AddDeckMobile extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisSize: MainAxisSize.max,
           children: [
-            TextField(
+            const TextField(
               decoration: InputDecoration(
                 labelText: "Name",
               ),
             ),
-            Spacer(),
+            const Spacer(),
             ElevatedButton(
               onPressed: () {},
               child: Row(
